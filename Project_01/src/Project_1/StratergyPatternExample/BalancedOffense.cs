@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace StratergyPatternExample
+{
+public class BalancedOffense : IOffensiveBehavior
+{
+   private bool _timeForRunPlay = true;
+
+   public void RunPlay()
+   {
+      var msg = (_timeForRunPlay) ? "Ran a running play..." : "Ran a passing play...";
+      Console.WriteLine(msg);
+      _timeForRunPlay = !_timeForRunPlay;
+   }
+}
+}

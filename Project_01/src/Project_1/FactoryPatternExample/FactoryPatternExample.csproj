@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFA0045E-2BA3-45EF-A6C1-52C35E93C3A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FactoryPatternExample</RootNamespace>
+    <AssemblyName>FactoryPatternExample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollegeBalancedFootballTeam.cs" />
+    <Compile Include="BalancedOffense.cs" />
+    <Compile Include="CollegeBallControlFootballTeam.cs" />
+    <Compile Include="BallControlOffense.cs" />
+    <Compile Include="CollegeFootballTeamFactory.cs" />
+    <Compile Include="FactoryPatternSim.cs" />
+    <Compile Include="FootballGameSim.cs" />
+    <Compile Include="FootballTeam.cs" />
+    <Compile Include="Interfaces\IFootballTeamFactory.cs" />
+    <Compile Include="Interfaces\IOffensiveBehavior.cs" />
+    <Compile Include="NflBalancedFootballTeam.cs" />
+    <Compile Include="NflBallControlFootballTeam.cs" />
+    <Compile Include="NflFootballTeamFactory.cs" />
+    <Compile Include="NflPassHappyFootballTeam.cs" />
+    <Compile Include="OffensiveType.cs" />
+    <Compile Include="CollegePassHappyFootballTeam.cs" />
+    <Compile Include="PassHappyOffense.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
